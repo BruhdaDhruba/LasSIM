@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bgfygyltrrv8r"]
+
+[ext_resource type="Script" uid="uid://bkw05ee7wwxkl" path="res://scenes_&_scripts/scripts/interactable.gd" id="1_8s6bd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g2old"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_8s6bd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8s6bd"]
+albedo_color = Color(0.18583608, 0.5977012, 0.47199255, 1)
+
+[node name="InteractableObject" type="StaticBody3D" unique_id=1033144309]
+collision_layer = 2
+script = ExtResource("1_8s6bd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=152259499]
+shape = SubResource("BoxShape3D_g2old")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1130638071]
+mesh = SubResource("BoxMesh_8s6bd")
+surface_material_override/0 = SubResource("StandardMaterial3D_8s6bd")
