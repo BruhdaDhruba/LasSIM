@@ -24,12 +24,12 @@ func _ready():
 
 # Handle mouse movement
 func _input(event):
+	if not can_move:
+		return
+
 	if event is InputEventMouseMotion:
-		# Rotate player around Y axis
 		rotate_y(-event.relative.x * mouse_sensitivity)
-		# Rotate camera around X axis
 		$Camera3D.rotate_x(-event.relative.y * mouse_sensitivity)
-		# Clamp vertical look
 		$Camera3D.rotation.x = clamp($Camera3D.rotation.x, deg_to_rad(-90), deg_to_rad(90))
 
 func interact():
