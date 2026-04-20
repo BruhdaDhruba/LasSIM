@@ -37,6 +37,8 @@ size = Vector3(10, 3, 0.5)
 [sub_resource type="BoxMesh" id="BoxMesh_hptm8"]
 size = Vector3(10, 3, 0.5)
 
+[sub_resource type="Environment" id="Environment_dp6x6"]
+
 [node name="Main" type="Node3D" unique_id=79910898]
 
 [node name="Player" parent="." unique_id=1109916547 instance=ExtResource("1_jjgbg")]
@@ -98,3 +100,9 @@ script = ExtResource("5_kexg1")
 
 [node name="Item" parent="." unique_id=1418120035 instance=ExtResource("6_dp6x6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -3)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1028728789]
+transform = Transform3D(0.70710677, -0.49999997, 0.49999997, 0, 0.70710677, 0.70710677, -0.70710677, -0.49999997, 0.49999997, 0, 6, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=747252072]
+environment = SubResource("Environment_dp6x6")
