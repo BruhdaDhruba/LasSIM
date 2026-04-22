@@ -1,12 +1,12 @@
-[gd_scene format=3 uid="uid://boctuhijg2qxt"]
+[gd_scene format=3 uid="uid://dw41858m77015"]
 
-[ext_resource type="PackedScene" uid="uid://cu6hek0oql0d8" path="res://scenes_&_scripts/player.tscn" id="1_jjgbg"]
-[ext_resource type="PackedScene" uid="uid://bgfygyltrrv8r" path="res://scenes_&_scripts/interactable.tscn" id="2_bo1nx"]
-[ext_resource type="PackedScene" uid="uid://50lgj1yu2kwl" path="res://scenes_&_scripts/npc.tscn" id="3_njvur"]
-[ext_resource type="PackedScene" uid="uid://51oybgkali5g" path="res://scenes_&_scripts/dialogue_ui.tscn" id="4_u7h47"]
-[ext_resource type="Script" uid="uid://r3vmaod47mnd" path="res://scenes_&_scripts/scripts/inventory.gd" id="5_kexg1"]
-[ext_resource type="PackedScene" uid="uid://ci4ywgxyx6fqa" path="res://scenes_&_scripts/item.tscn" id="6_dp6x6"]
-[ext_resource type="PackedScene" uid="uid://bkfvtrx74kmqm" path="res://scenes_&_scripts/door.tscn" id="7_8wflu"]
+[ext_resource type="PackedScene" uid="uid://cu6hek0oql0d8" path="res://scenes_&_scripts/player.tscn" id="1_i3ahs"]
+[ext_resource type="PackedScene" uid="uid://51oybgkali5g" path="res://scenes_&_scripts/dialogue_ui.tscn" id="2_7g670"]
+[ext_resource type="PackedScene" uid="uid://50lgj1yu2kwl" path="res://scenes_&_scripts/npc.tscn" id="3_hxhrm"]
+[ext_resource type="PackedScene" uid="uid://bgfygyltrrv8r" path="res://scenes_&_scripts/interactable.tscn" id="4_dqmk4"]
+[ext_resource type="Script" uid="uid://r3vmaod47mnd" path="res://scenes_&_scripts/scripts/inventory.gd" id="5_vwnl1"]
+[ext_resource type="PackedScene" uid="uid://ci4ywgxyx6fqa" path="res://scenes_&_scripts/item.tscn" id="6_lbdpq"]
+[ext_resource type="PackedScene" uid="uid://bkfvtrx74kmqm" path="res://scenes_&_scripts/door.tscn" id="7_7g670"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jjgbg"]
 size = Vector3(10, 0.5, 10)
@@ -44,7 +44,7 @@ ambient_light_color = Color(0.70724666, 0.820383, 1, 1)
 
 [node name="Main" type="Node3D" unique_id=79910898]
 
-[node name="Player" parent="." unique_id=1109916547 instance=ExtResource("1_jjgbg")]
+[node name="Player" parent="." unique_id=1109916547 instance=ExtResource("1_i3ahs")]
 
 [node name="Floor" type="StaticBody3D" parent="." unique_id=1477635764]
 
@@ -90,18 +90,18 @@ shape = SubResource("BoxShape3D_ynf5e")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Wall2" unique_id=1663361434]
 mesh = SubResource("BoxMesh_hptm8")
 
-[node name="DialogueUI" parent="." unique_id=2022642713 groups=["dialogue_ui"] instance=ExtResource("4_u7h47")]
+[node name="DialogueUI" parent="." unique_id=2022642713 groups=["dialogue_ui"] instance=ExtResource("2_7g670")]
 
-[node name="NPC" parent="." unique_id=1795041300 instance=ExtResource("3_njvur")]
+[node name="NPC" parent="." unique_id=1795041300 instance=ExtResource("3_hxhrm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.3, 0)
 
-[node name="InteractableObject" parent="." unique_id=1033144309 instance=ExtResource("2_bo1nx")]
+[node name="InteractableObject" parent="." unique_id=1033144309 instance=ExtResource("4_dqmk4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.755748, 4)
 
 [node name="Inventory" type="Node" parent="." unique_id=1624671444 groups=["inventory"]]
-script = ExtResource("5_kexg1")
+script = ExtResource("5_vwnl1")
 
-[node name="Item" parent="." unique_id=1418120035 instance=ExtResource("6_dp6x6")]
+[node name="Item" parent="." unique_id=1418120035 instance=ExtResource("6_lbdpq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.756, -3)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1028728789]
@@ -112,6 +112,6 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=747252072]
 environment = SubResource("Environment_dp6x6")
 
-[node name="Door" parent="." unique_id=234801258 instance=ExtResource("7_8wflu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.75, 0.7987497, -4.442)
-target_scene = "uid://dw41858m77015"
+[node name="Door" parent="." unique_id=234801258 instance=ExtResource("7_7g670")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.75, 0.799, 4.442)
+target_scene = "uid://boctuhijg2qxt"
