@@ -3,6 +3,14 @@ extends Node
 var inventory = []
 var collected_badges = []
 var cleared_pubs = {}
+var collected_items = []
+
+func mark_item_collected(item_id):
+	if item_id not in collected_items:
+		collected_items.append(item_id)
+
+func is_item_collected(item_id):
+	return item_id in collected_items
 
 func add_item(item_name):
 	if item_name not in inventory:

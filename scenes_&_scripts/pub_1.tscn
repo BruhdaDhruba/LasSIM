@@ -103,6 +103,7 @@ script = ExtResource("5_vwnl1")
 
 [node name="Item" parent="." unique_id=1418120035 instance=ExtResource("6_lbdpq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.756, -3)
+item_id = "nachos_pub1"
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1028728789]
 transform = Transform3D(0.70710677, -0.49999997, 0.49999997, 0, 0.70710677, 0.70710677, -0.70710677, -0.49999997, 0.49999997, 0, 6, 0)
