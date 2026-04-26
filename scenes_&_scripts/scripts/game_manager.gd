@@ -4,6 +4,7 @@ var inventory = []
 var collected_badges = []
 var cleared_pubs = {}
 var collected_items = []
+var next_spawn_id = ""
 
 func mark_item_collected(item_id):
 	if item_id not in collected_items:

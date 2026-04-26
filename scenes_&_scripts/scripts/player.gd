@@ -16,11 +16,25 @@ func enable_movement():
 	
 func set_interact_cooldown(time):
 	interact_cooldown = time
+	
+func move_to_spawn_point():
+	if GameManager.next_spawn_id == "":
+		return
+
+	var spawn_points = get_tree().get_nodes_in_group("spawn_points")
+	for spawn in spawn_points:
+		if spawn.spawn_id == GameManager.next_spawn_id:
+			global_position = spawn.global_position
+			global_rotation = spawn.global_rotation
+			break
+
+	GameManager.next_spawn_id = ""
 
 # Called when the scene starts
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	add_to_group("player")
+	call_deferred("move_to_spawn_point")
 
 # Handle mouse movement
 func _input(event):
