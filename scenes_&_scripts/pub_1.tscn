@@ -7,8 +7,9 @@
 [ext_resource type="Script" uid="uid://r3vmaod47mnd" path="res://scenes_&_scripts/scripts/inventory.gd" id="5_vwnl1"]
 [ext_resource type="PackedScene" uid="uid://ci4ywgxyx6fqa" path="res://scenes_&_scripts/item.tscn" id="6_lbdpq"]
 [ext_resource type="PackedScene" uid="uid://bkfvtrx74kmqm" path="res://scenes_&_scripts/door.tscn" id="7_7g670"]
-[ext_resource type="PackedScene" uid="uid://bqpo7ekag6pxv" path="res://scenes_&_scripts/spawn_point.tscn" id="8_hxhrm"]
-[ext_resource type="PackedScene" uid="uid://3u2wtq72twsa" path="res://scenes_&_scripts/badge.tscn" id="9_dqmk4"]
+[ext_resource type="PackedScene" path="res://scenes_&_scripts/spawn_point.tscn" id="8_hxhrm"]
+[ext_resource type="PackedScene" path="res://scenes_&_scripts/badge.tscn" id="9_dqmk4"]
+[ext_resource type="Script" uid="uid://danh7vs7up62n" path="res://scenes_&_scripts/scripts/pub_badge_counter_ui.gd" id="10_vwnl1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jjgbg"]
 size = Vector3(10, 0.5, 10)
@@ -128,3 +129,11 @@ spawn_id = "from_main"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.719952, 0.756, -3.0938268)
 badge_id = "bengtpub_badge1"
 badge_name = "Bengtpub Badge"
+
+[node name="PubBadgeCounterUI" type="CanvasLayer" parent="." unique_id=1560043312]
+script = ExtResource("10_vwnl1")
+
+[node name="BadgeLabel" type="Label" parent="PubBadgeCounterUI" unique_id=3890519]
+offset_right = 254.0
+offset_bottom = 34.0
+autowrap_mode = 2

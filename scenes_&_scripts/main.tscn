@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://r3vmaod47mnd" path="res://scenes_&_scripts/scripts/inventory.gd" id="5_kexg1"]
 [ext_resource type="PackedScene" uid="uid://ci4ywgxyx6fqa" path="res://scenes_&_scripts/item.tscn" id="6_dp6x6"]
 [ext_resource type="PackedScene" uid="uid://bkfvtrx74kmqm" path="res://scenes_&_scripts/door.tscn" id="7_8wflu"]
-[ext_resource type="PackedScene" uid="uid://bqpo7ekag6pxv" path="res://scenes_&_scripts/spawn_point.tscn" id="8_6ya32"]
+[ext_resource type="PackedScene" path="res://scenes_&_scripts/spawn_point.tscn" id="8_6ya32"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jjgbg"]
 size = Vector3(10, 0.5, 10)
