@@ -28,6 +28,9 @@ func add_badge(badge_name):
 
 func has_badge(badge_name):
 	return badge_name in collected_badges
+	
+func badge_count():
+	return collected_badges.size()
 
 func mark_pub_cleared(pub_name):
 	cleared_pubs[pub_name] = true

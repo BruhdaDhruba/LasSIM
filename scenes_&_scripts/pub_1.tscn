@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ci4ywgxyx6fqa" path="res://scenes_&_scripts/item.tscn" id="6_lbdpq"]
 [ext_resource type="PackedScene" uid="uid://bkfvtrx74kmqm" path="res://scenes_&_scripts/door.tscn" id="7_7g670"]
 [ext_resource type="PackedScene" uid="uid://bqpo7ekag6pxv" path="res://scenes_&_scripts/spawn_point.tscn" id="8_hxhrm"]
+[ext_resource type="PackedScene" uid="uid://3u2wtq72twsa" path="res://scenes_&_scripts/badge.tscn" id="9_dqmk4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jjgbg"]
 size = Vector3(10, 0.5, 10)
@@ -122,3 +123,8 @@ target_spawn_id = "from_pub1"
 [node name="from_main" parent="." unique_id=93682123 groups=["spawn_points"] instance=ExtResource("8_hxhrm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3, 0, 4.1)
 spawn_id = "from_main"
+
+[node name="Badge" parent="." unique_id=1289988558 instance=ExtResource("9_dqmk4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.719952, 0.756, -3.0938268)
+badge_id = "pub1_badge1"
+badge_name = "Bengtpub Badge"

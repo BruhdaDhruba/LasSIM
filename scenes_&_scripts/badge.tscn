@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://3u2wtq72twsa"]
+
+[ext_resource type="Script" uid="uid://dphvu3t1whfdu" path="res://scenes_&_scripts/scripts/badge.gd" id="1_1mo65"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1eybh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1eybh"]
+albedo_color = Color(0.49865043, 0.23042172, 0.70718586, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1mo65"]
+material = SubResource("StandardMaterial3D_1eybh")
+
+[node name="Badge" type="Node3D" unique_id=1289988558]
+script = ExtResource("1_1mo65")
+
+[node name="Body" type="StaticBody3D" parent="." unique_id=1618163839]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Body" unique_id=3295919]
+shape = SubResource("BoxShape3D_1eybh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1372526326]
+mesh = SubResource("BoxMesh_1mo65")
