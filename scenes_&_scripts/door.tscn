@@ -3,8 +3,10 @@
 [ext_resource type="Script" uid="uid://bj7p2g7gh10eu" path="res://scenes_&_scripts/scripts/door.gd" id="1_p1mca"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_o2r5g"]
+size = Vector3(2, 3, 0.2)
 
 [sub_resource type="BoxMesh" id="BoxMesh_p1mca"]
+size = Vector3(2, 3, 0.2)
 
 [node name="Door" type="Node3D" unique_id=234801258]
 script = ExtResource("1_p1mca")
