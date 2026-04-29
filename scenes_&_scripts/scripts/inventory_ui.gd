@@ -41,6 +41,10 @@ func update_inventory_text():
 	for pub_id in pubs:
 		var count = GameManager.get_badge_count_for_pub(pub_id)
 		var total = GameManager.get_badge_total_for_pub(pub_id)
-		text += "%s: %d / %d\n" % [pub_id.capitalize(), count, total]
+
+		if GameManager.is_pub_cleared(pub_id):
+			text += "%s: CLEARED\n" % pub_id.capitalize()
+		else:
+			text += "%s: %d / %d\n" % [pub_id.capitalize(), count, total]
 
 	label.text = text
