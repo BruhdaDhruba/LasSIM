@@ -6,11 +6,18 @@ var cleared_pubs = {}
 var collected_items = []
 var next_spawn_id = ""
 var pub_badge_totals = {
-	"bengtpub": 3,
+	"bengtpub": 1,
 	"bitchespub": 3,
 	"murphypub": 3
 }
 signal badges_changed
+
+func check_pub_completion(pub_id):
+	var count = get_badge_count_for_pub(pub_id)
+	var total = get_badge_total_for_pub(pub_id)
+
+	if total > 0 and count >= total:
+		mark_pub_cleared(pub_id)
 
 func get_badge_count_for_pub(pub_id):
 	var count = 0
@@ -40,7 +47,13 @@ func has_item(item_name):
 func add_badge(badge_id):
 	if badge_id not in collected_badges:
 		collected_badges.append(badge_id)
+
+		var parts = badge_id.split("_")
+		if parts.size() > 0:
+			check_pub_completion(parts[0])
+
 		badges_changed.emit()
+
 	print("Badges:", collected_badges)
 
 func has_badge(badge_name):

@@ -12,4 +12,8 @@ func _ready():
 func update_counter():
 	var count = GameManager.get_badge_count_for_pub(pub_id)
 	var total = GameManager.get_badge_total_for_pub(pub_id)
-	badge_label.text = "%s Badges: %d / %d" % [pub_display_name, count, total]
+
+	if GameManager.is_pub_cleared(pub_id):
+		badge_label.text = "%s Badges: CLEARED" % pub_display_name
+	else:
+		badge_label.text = "%s Badges: %d / %d" % [pub_display_name, count, total]
