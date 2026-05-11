@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cvku1ryk1yyvb"]
+
+[ext_resource type="Script" uid="uid://bb2mnt75spfin" path="res://scenes_&_scripts/scripts/door_loading.gd" id="1_r2w4t"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ub0gt"]
+
+[node name="DoorLoading" type="Control" unique_id=1545414665]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r2w4t")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=118541966]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=372007227]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Opening door..."
+label_settings = SubResource("LabelSettings_ub0gt")
+horizontal_alignment = 1
+autowrap_mode = 2

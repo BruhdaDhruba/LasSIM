@@ -11,6 +11,15 @@ var pub_badge_totals = {
 	"murphypub": 3
 }
 signal badges_changed
+var current_pub_id = ""
+
+func get_pub_display_name(pub_id):
+	var names = {
+		"bengtpub": "Bengtpub",
+		"bitchespub": "Bitchespub",
+		"murphypub": "Murphypub"
+	}
+	return names.get(pub_id, pub_id)
 
 func check_pub_completion(pub_id):
 	var count = get_badge_count_for_pub(pub_id)
