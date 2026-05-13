@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://51oybgkali5g" path="res://scenes_&_scripts/dialogue_ui.tscn" id="4_u7h47"]
 [ext_resource type="Script" uid="uid://r3vmaod47mnd" path="res://scenes_&_scripts/scripts/inventory.gd" id="5_kexg1"]
 [ext_resource type="PackedScene" uid="uid://bkfvtrx74kmqm" path="res://scenes_&_scripts/door.tscn" id="7_8wflu"]
+[ext_resource type="PackedScene" uid="uid://ci4ywgxyx6fqa" path="res://scenes_&_scripts/item.tscn" id="8_3oamj"]
 [ext_resource type="PackedScene" uid="uid://bqpo7ekag6pxv" path="res://scenes_&_scripts/spawn_point.tscn" id="8_6ya32"]
 [ext_resource type="PackedScene" uid="uid://cpyq1rwjnd7rb" path="res://scenes_&_scripts/inventory_ui.tscn" id="9_3oamj"]
 
@@ -116,3 +117,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.789, 0, -11)
 spawn_id = "from_pub"
 
 [node name="InventoryUI" parent="." unique_id=254328435 instance=ExtResource("9_3oamj")]
+
+[node name="ID" parent="." unique_id=1418120035 instance=ExtResource("8_3oamj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.354571, 0.756, 0)
+item_name = "ID Card"
+item_id = "id_card"
+pub_specific = false
+item_color = Color(0.7585131, 0.54798126, 0.80935144, 1)
+
+[node name="Mecenat" parent="." unique_id=1838080258 instance=ExtResource("8_3oamj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.136546, 0.756, -5.2055826)
+item_name = "Mecenat"
+item_id = "mecenat"
+pub_specific = false
+item_color = Color(0.07649981, 0.4061448, 0.64488053, 1)
