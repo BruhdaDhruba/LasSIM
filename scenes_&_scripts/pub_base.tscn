@@ -11,6 +11,10 @@
 [ext_resource type="Script" uid="uid://danh7vs7up62n" path="res://scenes_&_scripts/scripts/pub_badge_counter_ui.gd" id="10_qq8ku"]
 [ext_resource type="Script" uid="uid://bkb7hgrflcong" path="res://scenes_&_scripts/scripts/pub_manager.gd" id="11_1blpa"]
 
+[sub_resource type="Environment" id="Environment_dp6x6"]
+ambient_light_source = 2
+ambient_light_color = Color(0.70724666, 0.820383, 1, 1)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_jjgbg"]
 size = Vector3(40, 0.5, 40)
 
@@ -41,94 +45,14 @@ size = Vector3(40, 3, 0.5)
 [sub_resource type="BoxMesh" id="BoxMesh_hptm8"]
 size = Vector3(40, 3, 0.5)
 
-[sub_resource type="Environment" id="Environment_dp6x6"]
-ambient_light_source = 2
-ambient_light_color = Color(0.70724666, 0.820383, 1, 1)
-
 [node name="Main" type="Node3D" unique_id=79910898]
 
 [node name="Player" parent="." unique_id=1109916547 instance=ExtResource("1_baign")]
-
-[node name="Floor" type="StaticBody3D" parent="." unique_id=1477635764]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=189270618]
-shape = SubResource("BoxShape3D_jjgbg")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=823453413]
-mesh = SubResource("BoxMesh_bo1nx")
-
-[node name="Wall1" type="StaticBody3D" parent="." unique_id=299941924]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20.25)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall1" unique_id=1246495685]
-shape = SubResource("BoxShape3D_8gbba")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall1" unique_id=652613473]
-mesh = SubResource("BoxMesh_jjvhh")
-
-[node name="Wall4" type="StaticBody3D" parent="." unique_id=712490751]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20.25, 0, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall4" unique_id=702979704]
-shape = SubResource("BoxShape3D_kry3j")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall4" unique_id=614392464]
-mesh = SubResource("BoxMesh_21xkr")
-
-[node name="Wall3" type="StaticBody3D" parent="." unique_id=1843940496]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.25, 0, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall3" unique_id=1949380265]
-shape = SubResource("BoxShape3D_6bp64")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall3" unique_id=224162693]
-mesh = SubResource("BoxMesh_344ge")
-
-[node name="Wall2" type="StaticBody3D" parent="." unique_id=1768581422]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20.25)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall2" unique_id=1189582374]
-shape = SubResource("BoxShape3D_ynf5e")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall2" unique_id=1663361434]
-mesh = SubResource("BoxMesh_hptm8")
 
 [node name="DialogueUI" parent="." unique_id=2022642713 groups=["dialogue_ui"] instance=ExtResource("2_1blpa")]
 
 [node name="Inventory" type="Node" parent="." unique_id=1624671444 groups=["inventory"]]
 script = ExtResource("5_wsuja")
-
-[node name="Nachos" parent="." unique_id=1418120035 instance=ExtResource("6_h6l0d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.756, -3)
-item_color = Color(0.5746885, 0.44852084, 0, 1)
-
-[node name="Toast_2" parent="." unique_id=934548062 instance=ExtResource("6_h6l0d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.324996, 0.756, -10.734768)
-item_name = "Double toast"
-item_id = "toast_2"
-available_in_pubs = Array[String](["murphypub"])
-item_color = Color(0.85544455, 0.0002217865, 0.7592347, 1)
-
-[node name="NachosMaestro" parent="." unique_id=780283747 instance=ExtResource("6_h6l0d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.844064, 0.756, 9.013966)
-item_name = "NachosMaestro"
-item_id = "nachos_maestro"
-available_in_pubs = Array[String](["bengtpub"])
-item_color = Color(0.9385561, 0.77841794, 7.70092e-07, 1)
-
-[node name="Vegokäk" parent="." unique_id=936710396 instance=ExtResource("6_h6l0d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.926647, 0.756, 1.7705832)
-item_name = "Vegokäk"
-item_id = "vegokak"
-available_in_pubs = Array[String](["bitchespub"])
-item_color = Color(0.09133782, 0.7131118, 5.7756904e-07, 1)
-
-[node name="Toast_1" parent="." unique_id=2080090600 instance=ExtResource("6_h6l0d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.047989, 0.756, 5.9288797)
-item_name = "Single toast"
-item_id = "toast_1"
-available_in_pubs = Array[String](["bengtpub"])
-item_color = Color(0.944439, 0.03809467, 0.20160803, 1)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1028728789]
 transform = Transform3D(0.70710677, -0.49999997, 0.49999997, 0, 0.70710677, 0.70710677, -0.70710677, -0.49999997, 0.49999997, 0, 6, 0)
@@ -137,18 +61,6 @@ shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=747252072]
 environment = SubResource("Environment_dp6x6")
-
-[node name="MainDoor" parent="." unique_id=234801258 instance=ExtResource("7_4sjj0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.75, 1.8, 19.697556)
-target_scene = "uid://boctuhijg2qxt"
-target_spawn_id = "from_pub"
-
-[node name="from_main" parent="." unique_id=93682123 groups=["spawn_points"] instance=ExtResource("8_ygjcy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.939, 0.1, 16.16)
-spawn_id = "from_main"
-
-[node name="Badge" parent="." unique_id=1289988558 instance=ExtResource("9_o6hey")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.719952, 0.756, -3.0938268)
 
 [node name="PubBadgeCounterUI" type="CanvasLayer" parent="." unique_id=1560043312]
 script = ExtResource("10_qq8ku")
@@ -172,3 +84,95 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, -15)
 [node name="PubManager" type="Node" parent="." unique_id=568382730]
 script = ExtResource("11_1blpa")
 npc_scene = ExtResource("3_ory16")
+
+[node name="Environment" type="Node3D" parent="." unique_id=1278535568]
+
+[node name="Floor" type="StaticBody3D" parent="Environment" unique_id=1477635764]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Floor" unique_id=189270618]
+shape = SubResource("BoxShape3D_jjgbg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Floor" unique_id=823453413]
+mesh = SubResource("BoxMesh_bo1nx")
+
+[node name="Wall1" type="StaticBody3D" parent="Environment" unique_id=299941924]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20.25)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall1" unique_id=1246495685]
+shape = SubResource("BoxShape3D_8gbba")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Wall1" unique_id=652613473]
+mesh = SubResource("BoxMesh_jjvhh")
+
+[node name="Wall4" type="StaticBody3D" parent="Environment" unique_id=712490751]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 20.25, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall4" unique_id=702979704]
+shape = SubResource("BoxShape3D_kry3j")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Wall4" unique_id=614392464]
+mesh = SubResource("BoxMesh_21xkr")
+
+[node name="Wall3" type="StaticBody3D" parent="Environment" unique_id=1843940496]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.25, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall3" unique_id=1949380265]
+shape = SubResource("BoxShape3D_6bp64")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Wall3" unique_id=224162693]
+mesh = SubResource("BoxMesh_344ge")
+
+[node name="Wall2" type="StaticBody3D" parent="Environment" unique_id=1768581422]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20.25)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall2" unique_id=1189582374]
+shape = SubResource("BoxShape3D_ynf5e")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Wall2" unique_id=1663361434]
+mesh = SubResource("BoxMesh_hptm8")
+
+[node name="MainDoor" parent="Environment" unique_id=234801258 instance=ExtResource("7_4sjj0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.75, 1.8, 19.697556)
+target_scene = "uid://boctuhijg2qxt"
+target_spawn_id = "from_pub"
+
+[node name="from_main" parent="Environment" unique_id=93682123 groups=["spawn_points"] instance=ExtResource("8_ygjcy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.939, 0.1, 16.16)
+spawn_id = "from_main"
+
+[node name="Collectibles" type="Node3D" parent="." unique_id=1336539753]
+
+[node name="Nachos" parent="Collectibles" unique_id=1418120035 instance=ExtResource("6_h6l0d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.756, -3)
+item_color = Color(0.5746885, 0.44852084, 0, 1)
+
+[node name="Toast_2" parent="Collectibles" unique_id=934548062 instance=ExtResource("6_h6l0d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.324996, 0.756, -10.734768)
+item_name = "Double toast"
+item_id = "toast_2"
+available_in_pubs = Array[String](["murphypub"])
+item_color = Color(0.85544455, 0.0002217865, 0.7592347, 1)
+
+[node name="NachosMaestro" parent="Collectibles" unique_id=780283747 instance=ExtResource("6_h6l0d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.844064, 0.756, 9.013966)
+item_name = "NachosMaestro"
+item_id = "nachos_maestro"
+available_in_pubs = Array[String](["bengtpub"])
+item_color = Color(0.9385561, 0.77841794, 7.70092e-07, 1)
+
+[node name="Vegokäk" parent="Collectibles" unique_id=936710396 instance=ExtResource("6_h6l0d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.926647, 0.756, 1.7705832)
+item_name = "Vegokäk"
+item_id = "vegokak"
+available_in_pubs = Array[String](["bitchespub"])
+item_color = Color(0.09133782, 0.7131118, 5.7756904e-07, 1)
+
+[node name="Toast_1" parent="Collectibles" unique_id=2080090600 instance=ExtResource("6_h6l0d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.047989, 0.756, 5.9288797)
+item_name = "Single toast"
+item_id = "toast_1"
+available_in_pubs = Array[String](["bengtpub"])
+item_color = Color(0.944439, 0.03809467, 0.20160803, 1)
+
+[node name="Badge" parent="Collectibles" unique_id=1289988558 instance=ExtResource("9_o6hey")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.719952, 0.756, -3.0938268)
