@@ -18,32 +18,48 @@ ambient_light_color = Color(0.70724666, 0.820383, 1, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_jjgbg"]
 size = Vector3(40, 0.5, 40)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_baign"]
+albedo_color = Color(0.3834698, 0.20573634, 0.120041005, 1)
+
 [sub_resource type="BoxMesh" id="BoxMesh_bo1nx"]
+material = SubResource("StandardMaterial3D_baign")
 size = Vector3(40, 0.5, 40)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8gbba"]
-size = Vector3(40, 3, 0.5)
+size = Vector3(40, 10, 0.5)
 
 [sub_resource type="BoxMesh" id="BoxMesh_jjvhh"]
-size = Vector3(40, 3, 0.5)
+size = Vector3(40, 10, 0.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kry3j"]
-size = Vector3(40, 3, 0.5)
+size = Vector3(40, 10, 0.5)
 
 [sub_resource type="BoxMesh" id="BoxMesh_21xkr"]
-size = Vector3(40, 3, 0.5)
+size = Vector3(40, 10, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_baign"]
+size = Vector3(29, 10, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1blpa"]
+size = Vector3(29, 10, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rx40r"]
+size = Vector3(12, 10, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wsuja"]
+size = Vector3(12, 10, 0.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6bp64"]
-size = Vector3(40, 3, 0.5)
+size = Vector3(40, 10, 0.5)
 
 [sub_resource type="BoxMesh" id="BoxMesh_344ge"]
-size = Vector3(40, 3, 0.5)
+size = Vector3(40, 10, 0.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ynf5e"]
-size = Vector3(40, 3, 0.5)
+size = Vector3(40, 10, 0.5)
 
 [sub_resource type="BoxMesh" id="BoxMesh_hptm8"]
-size = Vector3(40, 3, 0.5)
+size = Vector3(40, 10, 0.5)
 
 [node name="Main" type="Node3D" unique_id=79910898]
 
@@ -73,13 +89,13 @@ autowrap_mode = 2
 [node name="NPCSpawns" type="Node3D" parent="." unique_id=756532747]
 
 [node name="Spawn_AL" type="Marker3D" parent="NPCSpawns" unique_id=1862907470]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 1.3, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.003875, 1.3, 7.9291763)
 
 [node name="Spawn_SA" type="Marker3D" parent="NPCSpawns" unique_id=201468213]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 1.3, 0)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15.44882, 1.3, -12.866207)
 
 [node name="Spawn_Bar" type="Marker3D" parent="NPCSpawns" unique_id=174421790]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, -15)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15.44, 1.3, -15)
 
 [node name="PubManager" type="Node" parent="." unique_id=568382730]
 script = ExtResource("11_1blpa")
@@ -113,6 +129,54 @@ shape = SubResource("BoxShape3D_kry3j")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Wall4" unique_id=614392464]
 mesh = SubResource("BoxMesh_21xkr")
 
+[node name="Wall6" type="StaticBody3D" parent="Environment" unique_id=616787067]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.388995, 0, 5.8424845)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall6" unique_id=1064985598]
+shape = SubResource("BoxShape3D_baign")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Wall6" unique_id=456853247]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.30770302, 0, 0)
+mesh = SubResource("BoxMesh_1blpa")
+
+[node name="Wall9" type="StaticBody3D" parent="Environment" unique_id=871926094]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.666207, 0, 5.8424845)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall9" unique_id=2022339794]
+shape = SubResource("BoxShape3D_baign")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Wall9" unique_id=1378724128]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.30770302, 0, 0)
+mesh = SubResource("BoxMesh_1blpa")
+
+[node name="Wall8" type="StaticBody3D" parent="Environment" unique_id=347938019]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.282659, 0, 5.8424845)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall8" unique_id=1919295136]
+shape = SubResource("BoxShape3D_baign")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Wall8" unique_id=81249865]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.30770302, 0, 0)
+mesh = SubResource("BoxMesh_1blpa")
+
+[node name="Wall7" type="StaticBody3D" parent="Environment" unique_id=1539364273]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -14.1736965, 0, -8.912669)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall7" unique_id=2096967964]
+shape = SubResource("BoxShape3D_rx40r")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Wall7" unique_id=1154041200]
+mesh = SubResource("BoxMesh_wsuja")
+
+[node name="Wall10" type="StaticBody3D" parent="Environment" unique_id=1235202796]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14.476055, 0, 9.339393)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall10" unique_id=1505818813]
+shape = SubResource("BoxShape3D_rx40r")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Wall10" unique_id=610287226]
+mesh = SubResource("BoxMesh_wsuja")
+
 [node name="Wall3" type="StaticBody3D" parent="Environment" unique_id=1843940496]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.25, 0, 0)
 
@@ -132,12 +196,12 @@ shape = SubResource("BoxShape3D_ynf5e")
 mesh = SubResource("BoxMesh_hptm8")
 
 [node name="MainDoor" parent="Environment" unique_id=234801258 instance=ExtResource("7_4sjj0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.75, 1.8, 19.697556)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1394215, 1.8, 19.697556)
 target_scene = "uid://boctuhijg2qxt"
 target_spawn_id = "from_pub"
 
 [node name="from_main" parent="Environment" unique_id=93682123 groups=["spawn_points"] instance=ExtResource("8_ygjcy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.939, 0.1, 16.16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9504213, 0.1, 16.16)
 spawn_id = "from_main"
 
 [node name="Collectibles" type="Node3D" parent="." unique_id=1336539753]
@@ -147,7 +211,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.756, -3)
 item_color = Color(0.5746885, 0.44852084, 0, 1)
 
 [node name="Toast_2" parent="Collectibles" unique_id=934548062 instance=ExtResource("6_h6l0d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.324996, 0.756, -10.734768)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.080647, 0.756, -17.616692)
 item_name = "Double toast"
 item_id = "toast_2"
 available_in_pubs = Array[String](["murphypub"])
@@ -168,7 +232,7 @@ available_in_pubs = Array[String](["bitchespub"])
 item_color = Color(0.09133782, 0.7131118, 5.7756904e-07, 1)
 
 [node name="Toast_1" parent="Collectibles" unique_id=2080090600 instance=ExtResource("6_h6l0d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.047989, 0.756, 5.9288797)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.705502, 0.756, 5.9288797)
 item_name = "Single toast"
 item_id = "toast_1"
 available_in_pubs = Array[String](["bengtpub"])
