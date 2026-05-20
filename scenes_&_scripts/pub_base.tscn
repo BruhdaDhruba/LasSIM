@@ -7,9 +7,13 @@
 [ext_resource type="PackedScene" uid="uid://ci4ywgxyx6fqa" path="res://scenes_&_scripts/item.tscn" id="6_h6l0d"]
 [ext_resource type="PackedScene" uid="uid://bkfvtrx74kmqm" path="res://scenes_&_scripts/door.tscn" id="7_4sjj0"]
 [ext_resource type="PackedScene" uid="uid://bqpo7ekag6pxv" path="res://scenes_&_scripts/spawn_point.tscn" id="8_ygjcy"]
+[ext_resource type="PackedScene" uid="uid://b155ys4qv8tn8" path="res://addons/kaykit_furniture_bits/Assets/gltf/cabinet_medium.gltf" id="9_1blpa"]
 [ext_resource type="PackedScene" uid="uid://3u2wtq72twsa" path="res://scenes_&_scripts/badge.tscn" id="9_o6hey"]
 [ext_resource type="Script" uid="uid://danh7vs7up62n" path="res://scenes_&_scripts/scripts/pub_badge_counter_ui.gd" id="10_qq8ku"]
+[ext_resource type="PackedScene" uid="uid://dyq5uu1py3ihn" path="res://addons/kaykit_furniture_bits/Assets/gltf/table_medium_long.gltf" id="10_rx40r"]
 [ext_resource type="Script" uid="uid://bkb7hgrflcong" path="res://scenes_&_scripts/scripts/pub_manager.gd" id="11_1blpa"]
+[ext_resource type="PackedScene" uid="uid://468l2vo3ux2l" path="res://addons/kaykit_furniture_bits/Assets/gltf/couch.gltf" id="11_wsuja"]
+[ext_resource type="PackedScene" uid="uid://bi3ek2ub1w5i5" path="res://addons/kaykit_furniture_bits/Assets/gltf/chair_A_wood.gltf" id="12_wsuja"]
 
 [sub_resource type="Environment" id="Environment_dp6x6"]
 ambient_light_source = 2
@@ -38,10 +42,10 @@ size = Vector3(40, 10, 0.5)
 size = Vector3(40, 10, 0.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_baign"]
-size = Vector3(29, 10, 0.5)
+size = Vector3(20, 10, 0.5)
 
 [sub_resource type="BoxMesh" id="BoxMesh_1blpa"]
-size = Vector3(29, 10, 0.5)
+size = Vector3(22, 10, 0.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rx40r"]
 size = Vector3(12, 10, 0.5)
@@ -60,6 +64,8 @@ size = Vector3(40, 10, 0.5)
 
 [sub_resource type="BoxMesh" id="BoxMesh_hptm8"]
 size = Vector3(40, 10, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1blpa"]
 
 [node name="Main" type="Node3D" unique_id=79910898]
 
@@ -89,7 +95,7 @@ autowrap_mode = 2
 [node name="NPCSpawns" type="Node3D" parent="." unique_id=756532747]
 
 [node name="Spawn_AL" type="Marker3D" parent="NPCSpawns" unique_id=1862907470]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.003875, 1.3, 7.9291763)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.622421, 1.3, 10.675425)
 
 [node name="Spawn_SA" type="Marker3D" parent="NPCSpawns" unique_id=201468213]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15.44882, 1.3, -12.866207)
@@ -130,7 +136,7 @@ shape = SubResource("BoxShape3D_kry3j")
 mesh = SubResource("BoxMesh_21xkr")
 
 [node name="Wall6" type="StaticBody3D" parent="Environment" unique_id=616787067]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.388995, 0, 5.8424845)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.388995, 0, 9.512845)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall6" unique_id=1064985598]
 shape = SubResource("BoxShape3D_baign")
@@ -140,7 +146,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.30770302, 0, 0)
 mesh = SubResource("BoxMesh_1blpa")
 
 [node name="Wall9" type="StaticBody3D" parent="Environment" unique_id=871926094]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.666207, 0, 5.8424845)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.666207, 0, 9.512845)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall9" unique_id=2022339794]
 shape = SubResource("BoxShape3D_baign")
@@ -150,7 +156,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.30770302, 0, 0)
 mesh = SubResource("BoxMesh_1blpa")
 
 [node name="Wall8" type="StaticBody3D" parent="Environment" unique_id=347938019]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.282659, 0, 5.8424845)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.282659, 0, 9.512845)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall8" unique_id=1919295136]
 shape = SubResource("BoxShape3D_baign")
@@ -160,7 +166,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.30770302, 0, 0)
 mesh = SubResource("BoxMesh_1blpa")
 
 [node name="Wall7" type="StaticBody3D" parent="Environment" unique_id=1539364273]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -14.1736965, 0, -8.912669)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -14.1736965, 0, -1.5504332)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Wall7" unique_id=2096967964]
 shape = SubResource("BoxShape3D_rx40r")
@@ -203,6 +209,60 @@ target_spawn_id = "from_pub"
 [node name="from_main" parent="Environment" unique_id=93682123 groups=["spawn_points"] instance=ExtResource("8_ygjcy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9504213, 0.1, 16.16)
 spawn_id = "from_main"
+
+[node name="Bar Counter" parent="Environment" unique_id=259138061 instance=ExtResource("9_1blpa")]
+transform = Transform3D(-1.3113416e-07, 0, -1.5, 0, 1.5, 0, 3, 0, -6.556708e-08, -13.210577, 0.2499981, -13.892918)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Bar Counter" unique_id=1685036621]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Bar Counter/StaticBody3D" unique_id=1558980244]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_1blpa")
+
+[node name="Reception" parent="Environment" unique_id=1589624778 instance=ExtResource("9_1blpa")]
+transform = Transform3D(-1.4997365, 0, 0.028115641, 0, 1.5, 0, -0.028115641, 0, -1.4997365, 6.5447783, 0.2499981, 12.380296)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment/Reception" unique_id=94230541]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Reception/StaticBody3D" unique_id=1964137177]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_1blpa")
+
+[node name="Long Table 1" parent="Environment" unique_id=228581522 instance=ExtResource("10_rx40r")]
+transform = Transform3D(-6.556708e-08, 0, -1, 0, 1.5, 0, 1.5, 0, -4.371139e-08, -3.427, 0.25, -7.947)
+
+[node name="Long Table 5" parent="Environment" unique_id=512006042 instance=ExtResource("10_rx40r")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1, 17.040958, 0, -5.2874136)
+
+[node name="Long Table 4" parent="Environment" unique_id=410067738 instance=ExtResource("10_rx40r")]
+transform = Transform3D(-6.556708e-08, 0, -1, 0, 1.5, 0, 1.5, 0, -4.371139e-08, 8.202615, 0, -17.2)
+
+[node name="Long Table 6" parent="Environment" unique_id=886411738 instance=ExtResource("10_rx40r")]
+transform = Transform3D(-6.556708e-08, 0, -1, 0, 1.5, 0, 1.5, 0, -4.371139e-08, 15.110547, 0, -17.2)
+
+[node name="Long Table 3" parent="Environment" unique_id=180886555 instance=ExtResource("10_rx40r")]
+transform = Transform3D(-6.556708e-08, 0, -1, 0, 1.5, 0, 1.5, 0, -4.371139e-08, 4.3528557, 0, -7.9467964)
+
+[node name="Long Table 7" parent="Environment" unique_id=1078212523 instance=ExtResource("10_rx40r")]
+transform = Transform3D(-6.556708e-08, 0, -1, 0, 1.5, 0, 1.5, 0, -4.371139e-08, 10.546173, 0, -7.9467964)
+
+[node name="Long Table 2" parent="Environment" unique_id=1152226914 instance=ExtResource("10_rx40r")]
+transform = Transform3D(-6.556708e-08, 0, -1, 0, 1.5, 0, 1.5, 0, -4.371139e-08, 0.95180845, 0, -17.208187)
+
+[node name="Sofa" parent="Environment" unique_id=896443328 instance=ExtResource("11_wsuja")]
+transform = Transform3D(-6.556708e-08, 0, -1, 0, 1.5, 0, 1.5, 0, -4.371139e-08, 18.769, 0.25, 4.344)
+
+[node name="Chair 1" parent="Environment" unique_id=624727721 instance=ExtResource("12_wsuja")]
+transform = Transform3D(-6.556708e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.556708e-08, -1.089, 0.25, -6.77)
+
+[node name="Chair 4" parent="Environment" unique_id=1516848625 instance=ExtResource("12_wsuja")]
+transform = Transform3D(-6.556708e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.556708e-08, -1.089, 0.25, -9.2)
+
+[node name="Chair 2" parent="Environment" unique_id=1670796171 instance=ExtResource("12_wsuja")]
+transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, -5.767724, 0.25, -6.769662)
+
+[node name="Chair 3" parent="Environment" unique_id=856666964 instance=ExtResource("12_wsuja")]
+transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, -5.768, 0.25, -9.2)
 
 [node name="Collectibles" type="Node3D" parent="." unique_id=1336539753]
 
